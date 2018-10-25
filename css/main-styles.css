@@ -1,0 +1,461 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+html {
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+body {
+	font-size: 15px;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	background-color: #474553;
+}
+.header {
+	background-color: #702844;
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	text-align: center;
+}
+.nav-container {
+	width: 100%;
+	max-width: 1368px;
+	margin: 0 auto;
+	height: 60px;
+	position: relative;
+}
+
+#sidebar #toggle-btn {
+	display: none;
+}
+#sidebar {
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	background-color: #5b1832;
+	left: -250px;
+	top: 0;
+	z-index: 1001;
+}
+#sidebar.active {
+	left: 0;
+	transition: all 150ms linear;
+}
+#sidebar #toggle-btn {
+	position: absolute;
+	display: block;
+	left: 255px;
+	cursor: pointer;
+	top: 5px;
+	width: 55px;
+	height: 50px;
+	background: url(../images/mobile_menu_button.png);
+}
+#sidebar #toggle-btn.btn-active {
+	left: 255px;
+	background: url(../images/mobile_menu_close.png);
+}
+.links-container .work-menu {
+	text-align: left;
+}
+.links-container .work-menu p {
+	color: #e6e6e6;
+	padding: 21px 10px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #320919;
+	cursor: pointer;
+}
+.links-container .work-menu #toggle-menu-btn {
+	position: absolute;
+	right: 15px;
+	top: 82px;
+	color: #e6e6e6;
+	background: url(../images/menu-arrows-sprite.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 75%;
+	height: 15px;
+	width: 30px;
+	background-position-y: 0px;
+}
+.links-container .work-menu #toggle-menu-btn.down-arrow {
+	background-position-y: -14px;
+}
+.links-container .work-menu #work-links {
+	display: none;
+}
+.links-container .work-menu #work-links.work-links-active {
+	display: block;
+} 
+#sidebar a.home-link, .links-container a {
+	text-align: left;
+	margin-left: 0;
+	padding: 21px 10px;
+	border-bottom: 1px solid #320919;
+	display: block;
+	text-decoration: none;
+	color: #e6e6e6;
+	text-transform: uppercase;
+}
+#sidebar a.home-link:hover, #sidebar a.home-link:focus, .links-container a:hover, .links-container a:focus {
+	background-color: #702844;
+}
+.links-container .work-menu #work-links a {
+	padding-left: 13%;
+}
+.logo-container {
+	width: 100%;
+	text-align: center;
+}
+.logo-container #vp-logo {
+	height: 40px;
+	padding-top: 10px;
+	opacity: 1;
+}
+main {
+	max-width: 1368px;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #292634;
+}
+main .intro__container {
+	text-align: center;
+	padding: 3.5% 0%;
+	margin-bottom: 0.5%;
+}
+main .intro__container h2 {
+	color: #716e82;
+}
+.search__tab-container {
+	height: 45px;
+	cursor: pointer;
+}
+.search__tab-container .search__tab {
+	display: inline-block;
+	margin: 0;
+	height: 45px;
+	padding: 0 20px;
+}
+.search__tab-container .search__tab-hero {
+	background-color: #474553;
+}
+.search__tab-container .search__tab-villain {
+	background-color: #5c596b;
+}
+
+.search__tab p {
+	color: #4da1ff;
+	margin-top: 15px;
+}
+.search__tab-container .search__tab-villain p {
+	color: #ff6d4a;
+}
+.search__wrapper {
+	width: 85%;
+	margin: 0 auto;	
+}
+.compare__wrapper {
+	width: 88.5%;
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 0 auto;
+	margin-bottom: 1.5%;
+	margin-top: 1%;
+}
+.search__wrapper .search__container {
+	width: 100%;
+	background-color: #474553;
+}
+.compare__wrapper .compare__container {
+	width: 48.5%;
+	margin: 1% 0 1% 1%;
+}
+.compare__wrapper .compare__container {
+	width: 48%;
+}
+.compare__wrapper .compare__container:first-child {
+	margin-left: 2%;
+	background-color: #474553;
+}
+.compare__wrapper .compare__container:last-child {
+	margin-right: 2%;
+	background-color: #5c596b;
+}
+.search__container .search__profile, .compare__container .compare__profile {
+	width: 100%;
+	padding-bottom: 1%;
+}
+.search__container .search__profile {
+	overflow: hidden;
+	padding-bottom: 2%;
+}
+.search__villains-container .search__profile {
+	background-color: #5c596b;
+}
+.search__profile.hide-content {
+	display: none !important;
+}
+.search__profile.show-content {
+	display: block !important;
+}
+.search__image-container {
+	width: 12%;
+	float: left;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+.compare__container .compare__profile .compare__hero-image, .compare__container .compare__profile .compare__villain-image {
+	width: 31%;
+	margin: 4% 0 0 4.5%;
+}
+.compare__container .compare__profile .compare__hero-image {
+	float: left;
+	border: 4px solid #4da1ff;
+}
+.compare__container .compare__profile .compare__villain-image {
+	float: right;
+	margin-right: 4.5%;
+	border: 4px solid #ff6d4a;
+}
+.search__container .search__profile .search__hero-image, .search__container .search__profile .search__villain-image {
+	width: 100%;
+	margin: 2% 0 0 2%;
+}
+.search__container .search__profile .search__hero-image {
+	border: 4px solid #4da1ff;
+}
+.search__container .search__profile .search__villain-image {
+	border: 4px solid #ff6d4a;
+}
+.search__stats-container {
+	margin-top: 2.5%;
+	float: left;
+	text-align: center;
+	width: 47.5%;
+	margin-left: 4%;
+}
+.compare__stats-container {
+	width: 54%;
+	float: left;
+	margin: 4% 0 0 4%;
+}
+.search__stats-container .search__stats, .compare__stats-container .compare__stats {
+	background-color: #474553;
+	margin-bottom: 1%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 2.5% 0;
+	margin-bottom: 2%;
+}
+.compare__stats-container .compare__stats {
+	height: 45px;
+}
+.compare__stats-container .compare__stats:nth-child(odd) {
+	background-color: #4d4b5a;
+}
+.compare__stats-container.compare__villain-stats .compare__stats {
+	background-color: #5c596b;
+}
+.compare__stats-container.compare__villain-stats .compare__stats:nth-child(odd) {
+	background-color: #636072;
+}
+.search__stats-container .search__stats {
+	background-color: #474553;
+	float: left;
+	width: 32%;
+	border-left: 1px solid #716e82;
+	margin-bottom: 0;
+}
+.search__stats-container.search__villain-stats .search__stats {
+	background-color: #5c596b;
+}
+.search__stats-container .search__stats:last-child {
+	border-right: 1px solid #716e82;
+}
+.search__stats-container .search__stats h2, .compare__stats-container .compare__stats h2 {
+	margin-left: 2%;
+	color: #4da1ff;
+}
+.search__stats-container.search__villain-stats .search__stats h2, .search__stats-container.search__villain-stats .search__stats p {
+	color: #ff6d4a;
+}
+.compare__stats-container .compare__stats h2 {
+	margin-left: 3%;
+	margin-top: 1.5%;
+} 
+.search__stats-container .search__stats h2 {
+	font-size: 100%;
+	margin-left: 0;
+}
+.search__stats-container .search__stats p {
+	font-size: 95%;
+	margin-left: 0;
+	margin-top: 8%;
+	color: #4da1ff;
+}
+.compare__stats-container .compare__stats p {
+	margin-top: 2.5%;
+	color: #8c88a0;
+	font-size: 90%;
+	margin-left: 3%;
+}
+.compare__stats-container .compare__stats h2, .compare__stats-container .compare__stats p {
+	font-size: 90%;
+}
+.compare__stats-container.compare__villain-stats .compare__stats h2 {
+	color: #ff6d4a;
+	text-align: left;
+}
+.compare__stats-container.compare__villain-stats .compare__stats p {
+	color: #9d99af;
+}
+.search__container .search__input-container {
+	text-align: left;
+	width: 29%;
+	float: left;
+	margin-left: 2%;
+	margin-top: 3.5%;
+}
+.search__input-container .search__btn-container {
+	margin-top: 5%;
+}
+.search__input-container input {
+	padding: 1%;
+	width: 96.5%;
+	height: 30px;
+}
+.search__input-container .search__btn {
+	padding: 1%;
+	width: 47%;
+	height: 45px;
+	border: none;
+	background-color: burlywood;
+}
+.search__input-container .search__hero-btn, .search__input-container .search__villan-btn {
+	margin-right: 2%;
+	background-color: #41e8e0;
+}
+.search__input-container .search__hero-stats-btn, .search__input-container .search__villan-stats-btn {
+	margin-left: 2%;
+	background-color: #7b3fee;
+}
+@media screen and (max-width: 1023px) {
+	.search__wrapper {
+		width: 95%;
+	}
+	.search__container .search__input-container {
+		margin-top: 2.5%;
+	}
+	.compare__wrapper {
+		width: 99%;
+	}
+}
+@media screen and (max-width: 900px) {
+	.compare__wrapper {
+		flex-wrap: wrap;
+		width: 95%;
+	}
+	.compare__wrapper .compare__container {
+		margin: 0 auto;
+		width: 100%;
+		margin-top: 2%;
+	}
+	.compare__wrapper .compare__container:first-child {
+		margin-left: 0;
+	}
+	.compare__wrapper .compare__container:last-child {
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 767px) {
+	.search__container .search__profile {
+		padding-bottom: 4%;
+	}
+	.search__image-container {
+		width: 21%;
+		margin-left: 3.25%;
+		margin-top: 3%;
+
+	}
+	.search__stats-container {
+		width: 65.5%;
+		margin-left: 6%;
+		margin-top: 4.5%;
+		margin-bottom: 5%;
+	}
+	.search__stats-container .search__stats {
+		width: 100%;
+		float: none;
+		padding: 3.5% 0;
+		overflow: hidden;
+		border: none;
+		border-bottom: 1px solid #716e82;
+	}
+	.search__stats-container .search__stats:first-child {
+		padding-top: 0;
+	}
+	.search__stats-container .search__stats h2 {
+		float: left;
+		text-align: left;
+		font-size: 90%;
+	}
+	.search__stats-container .search__stats p {
+		float: right;
+		margin-top: 0;
+		font-size: 90%;
+	}
+	.search__stats-container .search__stats:last-child {
+		border: none;
+	}
+	.search__container .search__input-container {
+		float: none;
+		margin: 0 auto;
+		width: 93%;
+	}
+	.search__input-container .search__btn {
+		width: 48.25%;
+	}
+	.search__input-container .search__hero-btn, .search__input-container .search__villan-btn {
+		margin-right: 1%;
+	}
+	.search__input-container .search__hero-stats-btn, .search__input-container .search__villan-stats-btn {
+		margin-left: 1%;
+	}
+	.search__input-container .search__btn-container {
+		margin-top: 3%;
+	}
+}
+@media screen and (max-width: 600px) {
+	main .intro__container h2 {
+		font-size: 120%;
+	}
+	
+	.compare__container .compare__profile .compare__hero-image, .compare__container .compare__profile .compare__villain-image  {
+		float: none;
+		width: 40%;
+	}
+	.compare__stats-container {
+		float: none;
+		width: 91%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+}
+@media screen and (max-width: 470px) {
+	.search__tab-container .search__tab {
+		text-align: center;
+		padding: 0 15px;
+	}
+	.search__tab-container .search__tab:last-child {
+	}
+	.search__tab-container .search__tab p {
+		font-size: 13px;
+	}
+}
